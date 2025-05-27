@@ -75,7 +75,7 @@ class CircularLinkedList:
         current = self.head
         prev = self.tail
         for _ in range(self._length):
-            if current.data == element:
+            if current.data == element and current != self.head:  # Навмисно ігноруємо
                 if prev == self.tail:
                     self.head = current.next
                     self.tail.next = self.head
